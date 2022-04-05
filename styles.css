@@ -1,0 +1,262 @@
+:root {
+    --light-grey: #e9e9e9;
+    --dark-grey: #414141;
+    --box-grey: #6c757d;
+}
+
+body {
+    background-color: var(--light-grey);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--dark-grey);
+    touch-action: manipulation;
+}
+
+.header {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.header hr {
+    width: 15rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    font-weight: initial;
+    color: var(--dark-grey);
+}
+
+#statsBtn {
+    cursor: pointer;
+    background: url(Gallery/stats.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    border: 0;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 1rem;
+    margin-bottom: 0.5em;
+    border-radius: 0.2em;
+    color: black;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.btn-outline-secondary {
+    border-color: var(--box-grey);
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: var(--box-grey);
+    border-color: var(--box-grey);
+}
+
+.d-flex {
+    display: flex;
+    width: 100%;
+}
+
+#keyboard {
+    padding-left: 50%;
+    padding-right: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.box2 {
+    padding: 1.5em;
+    border: 2px solid black;
+    border-radius: 2em / 4em;
+    margin: 0.3em;
+    cursor: pointer;
+}
+
+#a_0,
+#a_1,
+#a_2,
+#a_3,
+#a_4,
+#a_5 {
+    display: none;
+}
+
+.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+
+/* IFRAME STYLE */
+
+#statsIframe {
+    width: auto;
+    height: 300px;
+    margin: 2em auto;
+    display: block;
+    z-index: 99999;
+    background-clip: padding-box;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+}
+
+
+/* win and loss mesage */
+
+div#winTitle div,
+div#lossTitle div {
+    color: red;
+    position: relative;
+    animation-duration: 2s;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#winTitle div {
+    animation-name: winAnimate;
+}
+
+div#lossTitle div {
+    animation-name: lossAnimate;
+}
+
+@keyframes winAnimate {
+    0% {
+        color: blue;
+        font-size: 20px;
+    }
+    50% {
+        color: green;
+        font-size: 40px;
+    }
+    100% {
+        color: red;
+        font-size: 20px;
+    }
+}
+
+div#winTitle div {
+    color: red;
+    position: relative;
+    animation-name: winAnimate;
+    animation-duration: 2s;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes lossAnimate {
+    0% {
+        color: red;
+        font-size: 20px;
+    }
+    50% {
+        color: red;
+        font-size: 40px;
+    }
+    100% {
+        color: red;
+        font-size: 20px;
+    }
+}
+
+#closeIframe {
+    border: 0;
+    background: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+/* KEYBOARD */
+
+#b_enter {
+    width: 70%;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#b_delete {
+    padding: 0.5em;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}

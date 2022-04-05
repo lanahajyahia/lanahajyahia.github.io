@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="functions.js" defer></script>
+    <script src="gameboard.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Lana's Game</title>
+</head>
+
+<body>
+    <div class="iframe-container">
+        <iframe id="statsIframe" src="statics.html"></iframe>
+    </div>
+
+    <div class="header">
+        <h1 class=""> NUMBLE
+            <input type="button" name="button" value="" onclick="displayIframe()" id="statsBtn" />
+
+        </h1>
+
+        <hr>
+    </div>
+
+
+    <div class="container d-flex justify-content-center">
+
+        <div class="boxes"> </div>
+
+    </div>
+
+
+    <div class="winlose d-flex justify-content-center" id="winTitle" style="display: none;">
+        <div>
+            CONGRATULATIONS! YOU WON!
+        </div>
+    </div>
+
+    <div class="winlose d-flex justify-content-center" id="lossTitle" style="display: none;">
+        <div>
+            YOU LOST!
+        </div>
+    </div>
+
+    <div class="container" id="keyboard" style="margin-top: 4em;">
+        <div class="row fluid">
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>
